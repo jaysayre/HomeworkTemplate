@@ -123,7 +123,7 @@
 
 \title{
 \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
-\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+\normalsize\vspace{0.1in}\small{\hmwkDueDate}\\
 %\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}} %Uncomment as desired
 \vspace{-.1in} \author{\textbf{\hmwkAuthorName}}
 }
