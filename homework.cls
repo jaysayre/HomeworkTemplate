@@ -4,7 +4,7 @@
 %     version         = "0.1",
 %     date            = "June 2013",
 %     codetable       = "ISO/ASCII",
-%     docstring       = "Homework Class"
+%     docstring       = "Homework Class written by Jay Sayre"
 % --------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
@@ -12,10 +12,15 @@
 \LoadClass{article}
 %[12pt, oneside, letterpaper]
 
+%---------------------------------------------------------------------
+%----------- Put any frequently used packages here ------------
+%---------------------------------------------------------------------
+
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{extramarks}
 \usepackage{graphicx}
+\usepackage{Sweave} %Package used for R code/output. Feel free to comment out
 \usepackage[margin=1in]{geometry} % Sets margin measurements
 \linespread{1} % Line spacing
 
@@ -36,9 +41,10 @@
 %----------------------------------------------------------------------------
 % FONT OPTIONS
 %  Use Arno Pro instead of standard LaTeX fonts
+% package{mathspec} only works with xetex, and Arno Pro will only display with xetex
 %----------------------------------------------------------------------------
 \RequirePackage{ifxetex}
-\ifxetex
+\ifxetex % Allows the file to be rendered with pdflatex, albeit without nice font
 \RequirePackage{mathspec}
 
 \setmathsfont(Digits,Latin,Greek)[Numbers={OldStyle,Proportional}]{Arno Pro}
@@ -108,7 +114,7 @@
 \newcommand{\hmwkDueDate}{Monday,\ July\ 15,\ 2013}
 \newcommand{\hmwkClass}{Econometrics}
 \newcommand{\hmwkClassTime}{1:15pm}
-\newcommand{\hmwkClassInstructor}{Welding} 
+\newcommand{\hmwkClassInstructor}{Welding}
 \newcommand{\hmwkAuthorName}{Jay Sayre} 
 
 %-------------------------------------------------------------------------
@@ -118,14 +124,14 @@
 \title{
 \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
 \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
-\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+%\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}} %Uncomment as desired
+\vspace{-.1in} \author{\textbf{\hmwkAuthorName}}
 }
 
-\author{\textbf{\hmwkAuthorName}}
 \date{} % Insert date here if you want it to appear below your name
 
 %----------------------------------------------------------------------------
-%	TABLE OF CONTENTS
+%	TABLE OF CONTENTS - Optional
 %----------------------------------------------------------------------------
 
 %\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections
