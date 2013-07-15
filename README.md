@@ -12,8 +12,8 @@ Installation
 
 ### Windows 8 ###
 1. Download latest version of TexLive
-2. Install fonts by selecting all of them, right-clicking on install
-3. Download this Git Repo
+2. Download this Git Repo
+3. Install fonts by selecting all of them, right-clicking on install
 
 Compilation:
 In order to have the nice Arno Pro fonts, make sure to use XeLateX.
@@ -22,8 +22,9 @@ In the powershell, this is:
 
 ### Linux ###
 1. Download latest version of TexLive
+2. Download this Git Repo
 I found the instructions here to be helpful: [How to Install "Vanilla" TexLive](http://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu)
-2. Copy fonts to fonts folder - I'm not sure if this is the right folder
+3. Copy fonts to fonts folder - I'm not sure if this is the right folder
 
 > sudo cp fonts/* /usr/share/fonts/opentype;
 > sudo fc-cache -fsv
