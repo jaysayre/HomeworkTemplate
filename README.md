@@ -25,9 +25,19 @@ In the powershell, this is:
 I found the instructions here to be helpful: http://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu
 2. Copy fonts to fonts folder - I'm not sure if this is the right folder
 
-> sudo cp fonts/* /usr/share/fonts/opentype
+> sudo cp fonts/* /usr/share/fonts/opentype;
 > sudo fc-cache -fsv
 
 3. Run.
 
 > xelatex homework.tex
+
+Table of Contents
+=================
+
+If you have an assignment long enough to warrant a table of contents then you can add one.
+This is done by editing the homework.cls file, and uncommenting the last three lines or copy and pasting:
+
+\newpage
+\tableofcontents
+\newpage
