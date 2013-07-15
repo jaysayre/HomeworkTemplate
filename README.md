@@ -28,7 +28,7 @@ I found the instructions here to be helpful: [How to Install "Vanilla" TexLive](
 > sudo cp fonts/* /usr/share/fonts/opentype;
 > sudo fc-cache -fsv
 
-3. Run.
+Then simply run:
 
 > xelatex homework.tex
 
