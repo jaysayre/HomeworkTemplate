@@ -38,6 +38,6 @@ Table of Contents
 If you have an assignment long enough to warrant a table of contents then you can add one.
 This is done by editing the homework.cls file, and uncommenting the last three lines or copy and pasting:
 
-\newpage
-\tableofcontents
-\newpage
+> \newpage \\
+> \tableofcontents \\
+> \newpage
