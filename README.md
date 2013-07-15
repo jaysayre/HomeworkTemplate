@@ -5,7 +5,7 @@ This template is designed to make any latex homework assignment easy and profess
 This package provides all of the necessary components to use this template. For contributions, comments, and bug reports, please contact Jay Sayre at jsayre@marlboro.edu.
 This homework template is based on the latex template found here: http://www.latextemplates.com/template/structured-general-purpose-assignment, based on the original template by  Ted Pavlic, which I'm presuming I'm free to edit. 
 
-This template uses the Arno Pro font, designed by Robert Slimbach, and found in Jordan Suchow's (github.com/suchow) beautiful looking thesis template. 
+This template uses the Arno Pro font, designed by Robert Slimbach, and found in Jordan Suchow's [thesis](http://www.github.com/suchow) beautiful looking thesis template. 
 
 Installation
 ============
