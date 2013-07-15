@@ -24,6 +24,10 @@ In the powershell, this is:
 1. Download latest version of TexLive
 I found the instructions here to be helpful: http://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu
 2. Copy fonts to fonts folder - I'm not sure if this is the right folder
+
 > sudo cp fonts/* /usr/share/fonts/opentype
 > sudo fc-cache -fsv
-3. Run xelatex homework.tex
+
+3. Run.
+
+> xelatex homework.tex
