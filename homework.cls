@@ -4,13 +4,13 @@
 %     version         = "0.1",
 %     date            = "June 2013",
 %     codetable       = "ISO/ASCII",
-%     docstring       = "Homework Class written by Jay Sayre"
+%     supported       = "send email to jsayre@marlboro.edu",
+%     docstring       = "A homework Class written by Jay Sayre."
 % --------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{homework}[2013/06/01 v0.1 Homework Class]
 \LoadClass{article}
-%[12pt, oneside, letterpaper]
 
 %---------------------------------------------------------------------
 %----------- Put any frequently used packages here ------------
@@ -20,10 +20,12 @@
 \usepackage{lastpage}
 \usepackage{extramarks}
 \usepackage{graphicx}
+\usepackage{lipsum} % Used to generate filler text
 \usepackage{Sweave} %Package used for R code/output. Feel free to comment out
 \usepackage[margin=1in]{geometry} % Sets margin measurements
 \linespread{1} % Line spacing
 
+% ----------------------------------------------------------------------
 % Set up the header and footer
 %-----------------------------------------------------------------------
 \pagestyle{fancy}
@@ -36,7 +38,6 @@
 \renewcommand\headrulewidth{0.4pt} % Size of the header rule
 \renewcommand\footrulewidth{0.4pt} % Size of the footer rule
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
-% -----------------------------------------------------------------------
 
 %----------------------------------------------------------------------------
 % FONT OPTIONS
@@ -65,7 +66,6 @@
 
 %----------------------------------------------------------------------------
 %	DOCUMENT STRUCTURE COMMANDS
-%	Don't modify
 %----------------------------------------------------------------------------
 
 % Header and footer for when a page split occurs within a problem environment
@@ -127,7 +127,6 @@
 %\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}} %Uncomment as desired
 \vspace{-.1in} \author{\textbf{\hmwkAuthorName}}
 }
-
 \date{} % Insert date here if you want it to appear below your name
 
 %----------------------------------------------------------------------------
