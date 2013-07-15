@@ -1,8 +1,8 @@
 An Introduction
 ===============
 
-This template is designed to make any latex homework assignment easy and professional looking. It's what I use for most of my assignments.
-This package provides all of the necessary components to use this template. For contributions, comments, and bug reports, please contact Jay Sayre at jsayre@marlboro.edu.
+This template is designed to make any latex homework assignment easy and nice looking, and is what I use for most of my assignments.
+This package provides all of the necessary components to use this template. For contributions, comments, and bug reports, please contact Jay Sayre at jsayre at marlboro edu.
 This homework template is based on the latex template by [Ted Pavlic](http://www.tedpavlic.com/post_homework_tex_example.php). 
 
 This template uses the Arno Pro font, designed by Robert Slimbach, and found in Jordan Suchow's [beautiful looking thesis template.](https://github.com/suchow/LaTeX-template-for-Harvard-dissertation) 
