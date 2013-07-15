@@ -112,10 +112,10 @@
 
 \newcommand{\hmwkTitle}{Assignment\ \#4}
 \newcommand{\hmwkDueDate}{Monday,\ July\ 15,\ 2013}
-\newcommand{\hmwkClass}{Econometrics}
+\newcommand{\hmwkClass}{Class Here}
 \newcommand{\hmwkClassTime}{1:15pm}
-\newcommand{\hmwkClassInstructor}{Welding}
-\newcommand{\hmwkAuthorName}{Jay Sayre} 
+\newcommand{\hmwkClassInstructor}{Instructor}
+\newcommand{\hmwkAuthorName}{Name Here} 
 
 %-------------------------------------------------------------------------
 %  TITLE PAGE
