@@ -35,6 +35,7 @@
 %\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}} %Uncomment as desired
 \vspace{-.1in} \author{\textbf{\hmwkAuthorName}}
 }
+
 \date{} % Insert date here if you want it to appear below your name
 
 %----------------------------------------------------------------------------
@@ -63,7 +64,7 @@
 %----------------------------------------------------------------------------
 % FONT OPTIONS
 %  Use Arno Pro instead of standard LaTeX fonts
-% package{mathspec} only works with xetex, and Arno Pro will only display with xetex
+% package{mathspec} only works with xetex, so Arno Pro will only display with xetex
 %----------------------------------------------------------------------------
 
 \RequirePackage{ifxetex}
@@ -111,12 +112,14 @@
 \renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
 \section{\homeworkProblemName} % Make a section in the document with the custom problem count
 \enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+\vspace{-5pt}
 }{
 \exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+\vspace{-10pt} %Changes spacing between end of last problem and beginning of next
 }
 
 \newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
-\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+\vspace{5pt} \noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
 }
 
 \newcommand{\homeworkSectionName}{}
@@ -124,6 +127,9 @@
 \renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
 \subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
 \enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+\vspace{-5pt} %Changes spacing between problem section title and problem text
 }{
 \enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+\vspace{-15pt} %Changes spacing between end of last problem section and beginning of next section
+%Has the problem of making spacing at end of problem with sections too tight, \vspace{15pt} must be added to these in document.
 }
