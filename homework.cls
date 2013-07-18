@@ -23,7 +23,28 @@
 \usepackage{lipsum} % Used to generate filler text
 \usepackage{Sweave} %Package used for R code/output. Feel free to comment out
 \usepackage[margin=1in]{geometry} % Sets margin measurements
-\linespread{1} % Line spacing
+\linespread{1} % Line spacing 
+
+%-------------------------------------------------------------------------
+%  TITLE PAGE
+%-------------------------------------------------------------------------
+
+\title{
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+\normalsize\vspace{0.1in}\small{\hmwkDueDate}\\
+%\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}} %Uncomment as desired
+\vspace{-.1in} \author{\textbf{\hmwkAuthorName}}
+}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------
+%	TABLE OF CONTENTS - Optional
+%----------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections
+%\newpage
+%\tableofcontents
+%\newpage
 
 % ----------------------------------------------------------------------
 % Set up the header and footer
@@ -44,6 +65,7 @@
 %  Use Arno Pro instead of standard LaTeX fonts
 % package{mathspec} only works with xetex, and Arno Pro will only display with xetex
 %----------------------------------------------------------------------------
+
 \RequirePackage{ifxetex}
 \ifxetex % Allows the file to be rendered with pdflatex, albeit without nice font
 \RequirePackage{mathspec}
@@ -105,35 +127,3 @@
 }{
 \enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
 }
-   
-%--------------------------------------------------------------------
-%	NAME AND CLASS SECTION
-%--------------------------------------------------------------------
-
-\newcommand{\hmwkTitle}{Assignment\ \#4}
-\newcommand{\hmwkDueDate}{Monday,\ July\ 15,\ 2013}
-\newcommand{\hmwkClass}{Class Here}
-\newcommand{\hmwkClassTime}{1:15pm}
-\newcommand{\hmwkClassInstructor}{Instructor}
-\newcommand{\hmwkAuthorName}{Name Here} 
-
-%-------------------------------------------------------------------------
-%  TITLE PAGE
-%-------------------------------------------------------------------------
-
-\title{
-\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
-\normalsize\vspace{0.1in}\small{\hmwkDueDate}\\
-%\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}} %Uncomment as desired
-\vspace{-.1in} \author{\textbf{\hmwkAuthorName}}
-}
-\date{} % Insert date here if you want it to appear below your name
-
-%----------------------------------------------------------------------------
-%	TABLE OF CONTENTS - Optional
-%----------------------------------------------------------------------------
-
-%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections
-%\newpage
-%\tableofcontents
-%\newpage
