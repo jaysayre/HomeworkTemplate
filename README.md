@@ -33,6 +33,14 @@ Then simply run:
 
 > xelatex homework.tex
 
+Use
+===
+
+In order to use this template, a few things I've noticed:
+
+Packages you wish to use must be placed into the homework.cls file due to the Arno Pro font.
+XelateX is preferred to compile the document, but is not necessary -- however you will lose the nice font in the process.
+
 Table of Contents
 =================
 
