@@ -112,24 +112,26 @@
 \renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
 \section{\homeworkProblemName} % Make a section in the document with the custom problem count
 \enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
-\vspace{-5pt}
+\vspace{-5pt} %Changes spacing between problem title and text
 }{
 \exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
 \vspace{-10pt} %Changes spacing between end of last problem and beginning of next
 }
 
 \newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
-\vspace{5pt} \noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+\vspace{5pt} %Adds spacing in front of problem answer
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
 }
 
 \newcommand{\homeworkSectionName}{}
 \newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
 \renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
-\vspace{-10pt} \subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\vspace{-10pt}  % Changes spacing between start of section and what's before it
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
 \enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
 \vspace{-5pt} %Changes spacing between problem section title and problem text
 }{
 \enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
-\vspace{0pt} %Changes spacing between end of last problem section and beginning of next section
+\vspace{0pt} %Changes spacing between end of last problem section and beginning of next section. Not used.
 %Has the problem of making spacing at end of problem with sections too tight, \vspace{15pt} must be added to these in document.
 }
