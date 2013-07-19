@@ -125,11 +125,11 @@
 \newcommand{\homeworkSectionName}{}
 \newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
 \renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
-\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\vspace{-10pt} \subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
 \enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
 \vspace{-5pt} %Changes spacing between problem section title and problem text
 }{
 \enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
-\vspace{-15pt} %Changes spacing between end of last problem section and beginning of next section
+\vspace{0pt} %Changes spacing between end of last problem section and beginning of next section
 %Has the problem of making spacing at end of problem with sections too tight, \vspace{15pt} must be added to these in document.
 }

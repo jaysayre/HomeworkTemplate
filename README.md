@@ -39,14 +39,7 @@ Use
 In order to use this template, a few things I've noticed:
 
 * Packages you wish to use must be placed into the homework.cls file due to the Arno Pro font.
-* XelateX is preferred to compile the document, but is not necessary -- however you will lose the nice font in the process.
-* Problems with sections must have a \vspace{15pt} preceeding them to look properly. Like this:
-
-```
-\end{homeworkSection} 
-\vspace{15pt}
-\end{homeworkProblem} 
-```
+* XelateX is preferred to compile the document, but is not necessary -- however, without it, you will lose the nice font in the process.
 
 Table of Contents
 =================
