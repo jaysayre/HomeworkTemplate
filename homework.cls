@@ -32,7 +32,7 @@
 \title{
 \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
 \normalsize\vspace{0.1in}\small{\hmwkDueDate}\\
-%\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}} %Uncomment as desired
+%\vspace{0.1in}\large{\textit{\hmwkInstructor\ \hmwkClassTime}} %Uncomment as desired
 \vspace{-.1in} \author{\textbf{\hmwkAuthorName}}
 }
 
@@ -43,7 +43,7 @@
 %-----------------------------------------------------------------------
 \pagestyle{fancy}
 \lhead{\hmwkAuthorName} % Top left header
-\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime)} % Top center header %Assignment name removed
+\chead{\hmwkClass\ (\hmwkInstructor\ \hmwkClassTime): \hmwkTitle} % Top center header
 \rhead{\firstxmark} % Top right header
 \lfoot{\lastxmark} % Bottom left footer
 \cfoot{} % Bottom center footer
