@@ -101,25 +101,25 @@
 %	DEFINES HOMEWORK CHAPTERS
 %----------------------------------------------------------------------------
 
-\newcommand{\homeworkChapterName}{}
-\newenvironment{homeworkChapter}[1]{ % New environment for chapters of homework problems, takes 1 argument - name of the chapter
-\renewcommand{\homeworkChapterName}{#1} % Assign \homeworkChapterName to name of the chapter
-\section{\homeworkChapterName}  % Makes a chapter with custom name of the chapter
+\newcommand{\chapterName}{}
+\newenvironment{chapter}[1]{ % New environment for chapters of homework problems, takes 1 argument - name of the chapter
+\renewcommand{\chapterName}{#1} % Assign \chapterName to name of the chapter
+\section{\chapterName}  % Makes a chapter with custom name of the chapter
 }
 
 %----------------------------------------------------------------------------
 %	DEFINES HOMEWORK PROBLEMS
 %----------------------------------------------------------------------------
 
-\newcommand{\homeworkProblemName}{}
-\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\newcommand{\problemName}{}
+\newenvironment{problem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called problem which takes 1 argument (custom name) but the default is "Problem #"
 \stepcounter{homeworkProblemCounter} % Increase counter for number of problems
-\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
-\subsection{\homeworkProblemName} % Make a subsection in the document with the custom problem count
-\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+\renewcommand{\problemName}{#1} % Assign \problemName the name of the problem
+\subsection{\problemName} % Make a subsection in the document with the custom problem count
+\enterProblemHeader{\problemName} % Header and footer within the environment
 \vspace{-5pt} %Changes spacing between problem title and text
 }{
-\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+\exitProblemHeader{\problemName} % Header and footer after the environment
 \vspace{-10pt} %Changes spacing between end of last problem and beginning of next
 }
 
@@ -127,7 +127,7 @@
 %	DEFINES HOMEWORK ANSWERS
 %----------------------------------------------------------------------------
 
-\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\newcommand{\answer}[1]{ % Defines the problem answer command with the content as the only argument
 \vspace{5pt} %Adds spacing in front of problem answer
 \noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
 }
@@ -136,13 +136,13 @@
 %	DEFINES HOMEWORK SECTIONS
 %----------------------------------------------------------------------------
 
-\newcommand{\homeworkSectionName}{}
-\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
-\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\newcommand{\probpartName}{}
+\newenvironment{probpart}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\probpartName}{#1} % Assign \probpartName to the name of the section from the environment argument
 \vspace{-10pt}  % Changes spacing between start of section and what's before it
-\subsubsection{\homeworkSectionName} % Make a subsubsection with the custom name of the subsection
-\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+\subsubsection{\probpartName} % Make a subsubsection with the custom name of the subsection
+\enterProblemHeader{\problemName\ [\probpartName]} % Header and footer within the environment
 \vspace{-5pt} %Changes spacing between problem section title and problem text
 }{
-\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+\enterProblemHeader{\problemName} % Header and footer after the environment
 }
