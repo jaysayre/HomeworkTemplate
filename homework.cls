@@ -112,7 +112,7 @@
 %----------------------------------------------------------------------------
 
 \newcommand{\problemName}{}
-\newenvironment{problem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called problem which takes 1 argument (custom name) but the default is "Problem #"
+\newenvironment{problem}[1][Problem \#\arabic{homeworkProblemCounter}]{ % Makes a new environment called problem which takes 1 argument (custom name) but the default is "Problem #"
 \stepcounter{homeworkProblemCounter} % Increase counter for number of problems
 \renewcommand{\problemName}{#1} % Assign \problemName the name of the problem
 \subsection{\problemName} % Make a subsection in the document with the custom problem count
