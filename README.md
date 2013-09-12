@@ -22,8 +22,11 @@ In the powershell, this is:
 
 ### Linux ###
 1. Download latest version of TexLive
-2. Download this Git Repo
+
 I found the instructions here to be helpful: [How to Install "Vanilla" TexLive](http://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu)
+
+2. Download this Git Repo
+
 3. Copy fonts to fonts folder - I'm not sure if this is the right folder
 
 > sudo cp fonts/* /usr/share/fonts/opentype;
