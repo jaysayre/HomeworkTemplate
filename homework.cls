@@ -20,8 +20,9 @@
 \usepackage{lastpage}
 \usepackage{extramarks}
 \usepackage{graphicx}
+\usepackage{amssymb}
 \usepackage{lipsum} % Used to generate filler text
-\usepackage{Sweave} %Package used for R code/output. Feel free to comment out
+%\usepackage{Sweave} %Package used for R code/output. Feel free to comment out
 \usepackage[margin=1in]{geometry} % Sets margin measurements
 \linespread{1} % Line spacing 
 
@@ -96,6 +97,7 @@
 
 \setcounter{secnumdepth}{0} % Removes default section numbers
 \newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+\newcounter{probpartCounter} % Counter for homework sections
 
 %----------------------------------------------------------------------------
 %	DEFINES HOMEWORK CHAPTERS
@@ -115,11 +117,12 @@
 \newenvironment{problem}[1][Problem \#\arabic{homeworkProblemCounter}]{ % Makes a new environment called problem which takes 1 argument (custom name) but the default is "Problem #"
 \stepcounter{homeworkProblemCounter} % Increase counter for number of problems
 \renewcommand{\problemName}{#1} % Assign \problemName the name of the problem
+\setcounter{probpartCounter}{0} % Reset problem section naming for each problem
 \subsection{\problemName} % Make a subsection in the document with the custom problem count
 \enterProblemHeader{\problemName} % Header and footer within the environment
 \vspace{-5pt} %Changes spacing between problem title and text
 }{
-\exitProblemHeader{\problemName} % Header and footer after the environment
+\exitProblemHeader{\problemName } % Header and footer after the environment
 \vspace{-10pt} %Changes spacing between end of last problem and beginning of next
 }
 
@@ -137,12 +140,13 @@
 %----------------------------------------------------------------------------
 
 \newcommand{\probpartName}{}
-\newenvironment{probpart}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\newenvironment{probpart}[1][(\alph{probpartCounter})]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\stepcounter{probpartCounter} %Default is lettering for problem parts. Custom argument
 \renewcommand{\probpartName}{#1} % Assign \probpartName to the name of the section from the environment argument
 \vspace{-10pt}  % Changes spacing between start of section and what's before it
 \subsubsection{\probpartName} % Make a subsubsection with the custom name of the subsection
-\enterProblemHeader{\problemName\ [\probpartName]} % Header and footer within the environment
+\enterProblemHeader{\probpartName} % Header and footer within the environment
 \vspace{-5pt} %Changes spacing between problem section title and problem text
 }{
-\enterProblemHeader{\problemName} % Header and footer after the environment
+\enterProblemHeader{\problemName \probpartName} % Header and footer after the environment
 }
