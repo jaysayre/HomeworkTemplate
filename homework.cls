@@ -20,11 +20,18 @@
 \usepackage{lastpage}
 \usepackage{extramarks}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{lipsum} % Used to generate filler text
 %\usepackage{Sweave} %Package used for R code/output. Feel free to comment out
 \usepackage[margin=1in]{geometry} % Sets margin measurements
 \linespread{1} % Line spacing 
+
+%---------------------------------------------------------------------
+%                Shortcut Macros -- Put here
+%---------------------------------------------------------------------
+
+\DeclareMathOperator{\Lagr}{\mathcal{L}}
 
 %-------------------------------------------------------------------------
 %  TITLE PAGE
@@ -114,7 +121,7 @@
 %----------------------------------------------------------------------------
 
 \newcommand{\problemName}{}
-\newenvironment{problem}[1][Problem \#\arabic{homeworkProblemCounter}]{ % Makes a new environment called problem which takes 1 argument (custom name) but the default is "Problem #"
+\newenvironment{problem}[1][Problem \arabic{homeworkProblemCounter}.]{ % Makes a new environment called problem which takes 1 argument (custom name) but the default is "Problem #"
 \stepcounter{homeworkProblemCounter} % Increase counter for number of problems
 \renewcommand{\problemName}{#1} % Assign \problemName the name of the problem
 \setcounter{probpartCounter}{0} % Reset problem section naming for each problem
