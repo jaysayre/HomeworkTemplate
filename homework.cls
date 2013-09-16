@@ -1,8 +1,8 @@
 % -------------------------------------------------------------------
 %  @LaTeX-class-file{
 %     filename        = "homework.cls",
-%     version         = "0.1",
-%     date            = "June 2013",
+%     version         = "0.1.1",
+%     date            = "September 2013",
 %     codetable       = "ISO/ASCII",
 %     supported       = "send email to jsayre@marlboro.edu",
 %     docstring       = "A homework Class written by Jay Sayre."
