@@ -152,6 +152,7 @@
 \stepcounter{probpartCounter} %Default is lettering for problem parts. Custom argument
 \renewcommand{\probpartName}{#1} % Assign \probpartName to the name of the section from the environment argument
 \vspace{-10pt}  % Changes spacing between start of section and what's before it
+%\titleformat{\subsubsection}[runin] %For messing around with no space after subsubsection -- IN PROGRESS
 \subsubsection{\probpartName} % Make a subsubsection with the custom name of the subsection
 \enterProblemHeader{\probpartName} % Header and footer within the environment
 \vspace{-5pt} %Changes spacing between problem section title and problem text
