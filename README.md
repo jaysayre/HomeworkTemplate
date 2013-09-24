@@ -27,10 +27,9 @@ I found the instructions here to be helpful: [How to Install "Vanilla" TexLive](
 
 2. Download this Git Repo
 
-3. Copy fonts to fonts folder - I'm not sure if this is the right folder
+3. Copy fonts to fonts folder
 
-> sudo cp fonts/* /usr/share/fonts/opentype;
-> sudo fc-cache -fsv
+> sudo cp fonts/* /usr/local/share/fonts/
 
 Then simply run:
 
