@@ -1,15 +1,15 @@
 % -------------------------------------------------------------------
 %  @LaTeX-class-file{
 %     filename        = "homework.cls",
-%     version         = "0.1.1",
-%     date            = "September 2013",
+%     version         = "0.2",
+%     date            = "January 2015",
 %     codetable       = "ISO/ASCII",
-%     supported       = "send email to jsayre@marlboro.edu",
+%     supported       = "send email to sayrejay@gmail.com",
 %     docstring       = "A homework Class written by Jay Sayre."
 % --------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{homework}[2013/09/15 v0.1.1 Homework Class]
+\ProvidesClass{homework}[2013/06/01 v0.1 Homework Class]
 \LoadClass{article}
 
 %---------------------------------------------------------------------
@@ -20,12 +20,15 @@
 \usepackage{lastpage}
 \usepackage{extramarks}
 \usepackage{graphicx}
+\usepackage{mathptmx}
+\usepackage{datetime}
+\usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{lipsum} % Used to generate filler text
 %\usepackage{Sweave} %Package used for R code/output. Feel free to comment out
 \usepackage[margin=1in]{geometry} % Sets margin measurements
 \linespread{1} % Line spacing 
+\usdate
 
 %---------------------------------------------------------------------
 %                Shortcut Macros -- Put here
@@ -33,6 +36,8 @@
 
 \DeclareMathOperator{\Lagr}{\mathcal{L}}
 \DeclareMathOperator{\Emp}{\emptyset}
+\DeclareMathOperator{\pr}{\partial}
+\DeclareMathOperator{\R}{\mathbb{R}}
 
 %-------------------------------------------------------------------------
 %  TITLE PAGE
@@ -51,7 +56,7 @@
 % Set up the header and footer
 %-----------------------------------------------------------------------
 \pagestyle{fancy}
-\lhead{\hmwkAuthorName} % Top left header
+\lhead{\hmwkAuthorShort} % Top left header
 \chead{\hmwkClass\ (\hmwkInstructor\ \hmwkClassTime): \hmwkTitle} % Top center header
 \rhead{\firstxmark} % Top right header
 \lfoot{\lastxmark} % Bottom left footer
@@ -67,25 +72,27 @@
 % package{mathspec} only works with xetex, so Arno Pro will only display with xetex
 %----------------------------------------------------------------------------
 
-\RequirePackage{ifxetex}
-\ifxetex % Allows the file to be rendered with pdflatex, albeit without nice font
-\RequirePackage{mathspec}
+\normalfont
 
-\setmathsfont(Digits,Latin,Greek)[Numbers={OldStyle,Proportional}]{Arno Pro}
-\setmathrm{Arno Pro}
+%\RequirePackage{ifxetex}
+%\ifxetex % Allows the file to be rendered with pdflatex, albeit without nice font
+%\RequirePackage{mathspec}
 
-\RequirePackage{fontspec,xltxtra,xunicode}
-\defaultfontfeatures{Mapping=tex-text, Numbers=OldStyle}
-\setromanfont[Mapping=tex-text, 
-        Numbers=OldStyle, 
-			  Ligatures={Common}, 
-			  SizeFeatures={%
-		          {Size={-10}, Font=* Caption},
-		          {Size={10-13.0}, Font=*},
-		          {Size={13.01-19.9}, Font=* Subhead, Ligatures=Rare, Contextuals={Swash,Alternate}},
-		       {Size={19.91-},Font=* Display, Ligatures=Rare, Contextuals={Swash,Alternate}}}]
-			  {Arno Pro} %
-\fi
+%\setmathsfont(Digits,Latin,Greek)[Numbers={OldStyle,Proportional}]{Arial}
+%\setmathrm{Arial}
+
+%\RequirePackage{fontspec,xltxtra,xunicode}
+%\defaultfontfeatures{Mapping=tex-text, Numbers=OldStyle}
+%\setromanfont[Mapping=tex-text, 
+%        Numbers=OldStyle, 
+%			  Ligatures={Common}, 
+%			  SizeFeatures={%
+%		          {Size={-10}, Font=* Caption},
+%		          {Size={10-13.0}, Font=*},
+%		          {Size={13.01-19.9}, Font=* Subhead, Ligatures=Rare, Contextuals={Swash,Alternate}},
+%		       {Size={19.91-},Font=* Display, Ligatures=Rare, Contextuals={Swash,Alternate}}}]
+%			  {Arno Pro} %
+%\fi
 
 %----------------------------------------------------------------------------
 %	DOCUMENT STRUCTURE COMMANDS
@@ -152,7 +159,6 @@
 \stepcounter{probpartCounter} %Default is lettering for problem parts. Custom argument
 \renewcommand{\probpartName}{#1} % Assign \probpartName to the name of the section from the environment argument
 \vspace{-10pt}  % Changes spacing between start of section and what's before it
-%\titleformat{\subsubsection}[runin] %For messing around with no space after subsubsection -- IN PROGRESS
 \subsubsection{\probpartName} % Make a subsubsection with the custom name of the subsection
 \enterProblemHeader{\probpartName} % Header and footer within the environment
 \vspace{-5pt} %Changes spacing between problem section title and problem text
