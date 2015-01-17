@@ -9,7 +9,7 @@
 % --------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{homework}[2013/06/01 v0.1 Homework Class]
+\ProvidesClass{homework}[2015/01/17 v0.2 Homework Class]
 \LoadClass{article}
 
 %---------------------------------------------------------------------
