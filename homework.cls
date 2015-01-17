@@ -25,6 +25,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{lipsum}
 %\usepackage{Sweave} %Package used for R code/output. Feel free to comment out
 \usepackage[margin=1in]{geometry} % Sets margin measurements
 \linespread{1} % Line spacing 
