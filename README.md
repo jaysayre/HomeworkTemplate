@@ -27,9 +27,11 @@ I found the instructions here to be helpful: [How to Install "Vanilla" TexLive](
 
 2. Download this Git Repo
 
-3. Copy fonts to fonts folder
+3. Copy fonts to fonts folder (depends on distribution)
 
-> sudo cp fonts/* /usr/local/share/fonts/
+> sudo cp fonts/* /usr/local/share/fonts/  (Ubuntu <11.01 IIRC)
+> sudo cp fonts/* /usr/share/fonts/opentype/  (Ubuntu >11.01)
+> sudo fc-cache -f
 
 Then simply run:
 
