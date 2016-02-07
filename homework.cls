@@ -1,35 +1,36 @@
 % -------------------------------------------------------------------
 %  @LaTeX-class-file{
 %     filename        = "homework.cls",
-%     version         = "0.2",
-%     date            = "January 2015",
+%     version         = "1.0",
+%     date            = "February 2016",
 %     codetable       = "ISO/ASCII",
-%     supported       = "send email to sayrejay@gmail.com",
+%     supported       = "send email to sayrejay (at) gmai|",
 %     docstring       = "A homework Class written by Jay Sayre."
 % --------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{homework}[2015/01/17 v0.2 Homework Class]
+\ProvidesClass{homework}[2016/02/07 v1.0 Homework Class]
 \LoadClass{article}
 
 %---------------------------------------------------------------------
 %----------- Put any frequently used packages here ------------
 %---------------------------------------------------------------------
 
+\usepackage{lipsum}
 \usepackage{fancyhdr}
-\usepackage{lastpage}
 \usepackage{extramarks}
 \usepackage{graphicx}
-\usepackage{mathptmx}
-\usepackage{datetime}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{lipsum}
-%\usepackage{Sweave} %Package used for R code/output. Feel free to comment out
+\usepackage{euscript, amsmath, amssymb}
+\usepackage[colorlinks=true,
+            urlcolor=blue]{hyperref}
+\usepackage[innerleftmargin = 1.5pt, innerrightmargin = 1.5pt,
+	    innertopmargin = 1.5pt, innerbottommargin = 1.5pt,
+	    %splitbottomskip=-.5pt,
+	    skipabove = 0pt, skipbelow = 0pt,
+	    %backgroundcolor=shadecolor,
+	    everyline=true]{mdframed}
 \usepackage[margin=1in]{geometry} % Sets margin measurements
 \linespread{1} % Line spacing 
-\usdate
 
 %---------------------------------------------------------------------
 %                Shortcut Macros -- Put here
@@ -39,6 +40,11 @@
 \DeclareMathOperator{\Emp}{\emptyset}
 \DeclareMathOperator{\pr}{\partial}
 \DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Nbhd}{\EuScript{N}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\lTi}{\lim_{n \to \infty}}
 
 %-------------------------------------------------------------------------
 %  TITLE PAGE
@@ -50,7 +56,6 @@
 %\vspace{0.1in}\large{\textit{\hmwkInstructor\ \hmwkClassTime}} %Uncomment as desired
 \vspace{-.1in} \author{\textbf{\hmwkAuthorName}}
 }
-
 \date{} % Insert date here if you want it to appear below your name
 
 % ----------------------------------------------------------------------
@@ -62,38 +67,11 @@
 \rhead{\firstxmark} % Top right header
 \lfoot{\lastxmark} % Bottom left footer
 \cfoot{} % Bottom center footer
-\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\rfoot{Page\ \thepage\ }%of\ \pageref{LastPage}} % Bottom right footer
 \renewcommand\headrulewidth{0.4pt} % Size of the header rule
 \renewcommand\footrulewidth{0.4pt} % Size of the footer rule
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
-
-%----------------------------------------------------------------------------
-% FONT OPTIONS
-%  Use Arno Pro instead of standard LaTeX fonts
-% package{mathspec} only works with xetex, so Arno Pro will only display with xetex
-%----------------------------------------------------------------------------
-
 \normalfont
-
-%\RequirePackage{ifxetex}
-%\ifxetex % Allows the file to be rendered with pdflatex, albeit without nice font
-%\RequirePackage{mathspec}
-
-%\setmathsfont(Digits,Latin,Greek)[Numbers={OldStyle,Proportional}]{Arial}
-%\setmathrm{Arial}
-
-%\RequirePackage{fontspec,xltxtra,xunicode}
-%\defaultfontfeatures{Mapping=tex-text, Numbers=OldStyle}
-%\setromanfont[Mapping=tex-text, 
-%        Numbers=OldStyle, 
-%			  Ligatures={Common}, 
-%			  SizeFeatures={%
-%		          {Size={-10}, Font=* Caption},
-%		          {Size={10-13.0}, Font=*},
-%		          {Size={13.01-19.9}, Font=* Subhead, Ligatures=Rare, Contextuals={Swash,Alternate}},
-%		       {Size={19.91-},Font=* Display, Ligatures=Rare, Contextuals={Swash,Alternate}}}]
-%			  {Arno Pro} %
-%\fi
 
 %----------------------------------------------------------------------------
 %	DOCUMENT STRUCTURE COMMANDS
@@ -138,8 +116,8 @@
 \enterProblemHeader{\problemName} % Header and footer within the environment
 \vspace{-5pt} %Changes spacing between problem title and text
 }{
-\exitProblemHeader{\problemName } % Header and footer after the environment
-\vspace{-10pt} %Changes spacing between end of last problem and beginning of next
+\exitProblemHeader{\problemName} % Header and footer after the environment
+\vspace{-5pt} %Changes spacing between end of last problem and beginning of next
 }
 
 %----------------------------------------------------------------------------
@@ -147,9 +125,7 @@
 %----------------------------------------------------------------------------
 
 \newcommand{\answer}[1]{ % Defines the problem answer command with the content as the only argument
-\vspace{5pt} %Adds spacing in front of problem answer
-\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
-}
+\noindent \begin{mdframed} #1 \end{mdframed}}
 
 %----------------------------------------------------------------------------
 %	DEFINES HOMEWORK SECTIONS
