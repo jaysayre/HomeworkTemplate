@@ -2,7 +2,7 @@ An Introduction
 ===============
 
 This template is designed to make any latex homework assignment easy and nice looking, and is what I use for most of my assignments.
-This package provides all of the necessary components to use this template. For contributions, comments, and bug reports, please contact Jay Sayre at jsayre at marlboro edu.
+This package provides all of the necessary components to use this template. For contributions, comments, and bug reports, please contact Jay Sayre at sayrejay at Gmai|.
 This homework template is based on the latex template by [Ted Pavlic](http://www.tedpavlic.com/post_homework_tex_example.php). 
 
 Table of Contents
