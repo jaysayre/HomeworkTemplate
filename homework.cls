@@ -22,11 +22,18 @@
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb}
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{color}
+
+\definecolor{shadecolor}{rgb}{1,0.8,0.3} % Used for defining answer box color
+%\definecolor{fntcolor}{rgb}{0,0,0.4} % Midnight blue 
+\definecolor{fntcolor}{rgb}{0,0,0} % Black %Uncomment above line and comment this out to print in blue
 
 \usepackage[innerleftmargin = 1.5pt, innerrightmargin = 1.5pt, % Sets spacing for homework answer boxes
 	    innertopmargin = 1.5pt, innerbottommargin = 1.5pt,
 	    %splitbottomskip=-.5pt,
 	    skipabove = 0pt, skipbelow = 0pt,
+	    fontcolor = fntcolor,linecolor = fntcolor, 
+	    %backgroundcolor=shadecolor, % Uncomment this line to have answer boxes colored
 	    everyline=true]{mdframed}
 \usepackage[margin=1in]{geometry} % Sets margin measurements
 
