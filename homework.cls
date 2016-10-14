@@ -1,15 +1,15 @@
 % -------------------------------------------------------------------
 %  @LaTeX-class-file{
 %     filename        = "homework.cls",
-%     version         = "1.0",
-%     date            = "February 2016",
+%     version         = "1.1",
+%     date            = "October 2016",
 %     codetable       = "ISO/ASCII",
 %     supported       = "send email to sayrejay (at) gmai|",
 %     docstring       = "A homework Class written by Jay Sayre."
 % --------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{homework}[2016/02/07 v1.0 Homework Class]
+\ProvidesClass{homework}[2016/10/14 v1.1 Homework Class]
 \LoadClass{article}
 
 %---------------------------------------------------------------------
@@ -20,16 +20,24 @@
 \usepackage{fancyhdr}
 \usepackage{extramarks}
 \usepackage{graphicx}
-\usepackage{euscript, amsmath, amssymb}
-\usepackage[colorlinks=true,
-            urlcolor=blue]{hyperref}
-\usepackage[innerleftmargin = 1.5pt, innerrightmargin = 1.5pt,
+\usepackage{amsmath, amssymb}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+
+\usepackage[innerleftmargin = 1.5pt, innerrightmargin = 1.5pt, % Sets spacing for homework answer boxes
 	    innertopmargin = 1.5pt, innerbottommargin = 1.5pt,
 	    %splitbottomskip=-.5pt,
 	    skipabove = 0pt, skipbelow = 0pt,
-	    %backgroundcolor=shadecolor,
 	    everyline=true]{mdframed}
 \usepackage[margin=1in]{geometry} % Sets margin measurements
+
+\RequirePackage{ifxetex} % Used for providing text font, uses different package for xetex
+\ifxetex 
+\usepackage[T1]{fontenc}
+\usepackage{newpxtext,newpxmath}
+\else
+\usepackage{mathpazo,mathabx}
+\fi
+
 \linespread{1} % Line spacing 
 
 %---------------------------------------------------------------------
@@ -41,7 +49,6 @@
 \DeclareMathOperator{\pr}{\partial}
 \DeclareMathOperator{\R}{\mathbb{R}}
 \DeclareMathOperator{\N}{\mathbb{N}}
-\DeclareMathOperator{\Nbhd}{\EuScript{N}}
 \DeclareMathOperator{\Z}{\mathbb{Z}}
 \DeclareMathOperator{\Q}{\mathbb{Q}}
 \DeclareMathOperator{\lTi}{\lim_{n \to \infty}}
