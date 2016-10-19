@@ -8,8 +8,8 @@ This homework template is based on the latex template by [Ted Pavlic](http://www
 Table of Contents
 =================
 
-If you have an assignment long enough to warrant a table of contents then you can add one.
-This is done by editing the homework.cls file, and uncommenting the last three lines or copy and pasting:
+If you have an assignment long enough to warrant a table of contents, a TOC can be easily added.
+This is done by editing the homework.tex file and uncommenting these three lines:
 
 ```
 \newpage
