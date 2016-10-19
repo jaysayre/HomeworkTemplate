@@ -37,13 +37,7 @@
 	    everyline=true]{mdframed}
 \usepackage[margin=1in]{geometry} % Sets margin measurements
 
-\RequirePackage{ifxetex} % Used for providing text font, uses different package for xetex
-\ifxetex 
-\usepackage[T1]{fontenc}
-\usepackage{newpxtext,newpxmath}
-\else
-\usepackage{mathpazo,mathabx}
-\fi
+\usepackage{mathpazo,mathabx} % Provides text and math font
 
 \linespread{1} % Line spacing 
 
